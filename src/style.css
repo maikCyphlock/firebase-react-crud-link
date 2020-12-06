@@ -1,0 +1,32 @@
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+p {
+  font-family: "Castoro", serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: thin;
+  font-size: 18px;
+}
+
+div > i{
+  cursor: pointer;
+}
