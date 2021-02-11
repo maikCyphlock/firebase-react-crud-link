@@ -82,7 +82,7 @@ const Link = () => {
                   </div>
                 </div>
                 <p>{link.description}</p>
-                <a href={link.url} target="_blank" rel="noreferrer">
+                <a href={link.url} target="_blank" rel="noopener  noreferrer" >
                   visitar el link
                 </a>
               </div>
