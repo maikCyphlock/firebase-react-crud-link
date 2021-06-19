@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../Config";
 const LinkForm = (props) => {
-  const intialStateValues = {
-    url: "",
+  
+  const [values, setValues] = useState({
+  url: "",
     name: "",
     description: ""
-  };
- // eslint-disable-line react-hooks/exhaustive-deps
-  const [values, setValues] = useState(intialStateValues);
+  });
 
   const handleInputchange = (e) => {
     const { name, value } = e.target;
