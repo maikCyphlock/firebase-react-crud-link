@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../Config";
 const LinkForm = (props) => {
-  
-  const [values, setValues] = useState({
-  url: "",
+  const intialStateValues = {
+    url: "",
     name: "",
     description: ""
-  });
+  };
+
+  const [values, setValues] = useState(intialStateValues);
 
   const handleInputchange = (e) => {
     const { name, value } = e.target;
@@ -16,7 +17,7 @@ const LinkForm = (props) => {
     e.preventDefault();
 
     props.addOreditLink(values);
-    setValues({ ...values });
+    setValues({ ...intialStateValues });
   };
 
   const getLinkById = async (id) => {
@@ -34,7 +35,7 @@ const LinkForm = (props) => {
 
   useEffect(() => {
     if (props.Currentid === "") {
-      setValues({ ...values });
+      setValues({ ...intialStateValues });
     } else {
       getLinkById(props.Currentid);
     }
