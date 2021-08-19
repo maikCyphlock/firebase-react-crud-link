@@ -16,7 +16,7 @@ const LinkForm = (props) => {
     e.preventDefault();
 
     props.addOreditLink(values);
-    setValues({ ...intialStateValues });
+    setValues({ ...values });
   };
 
   const getLinkById = async (id) => {
@@ -34,7 +34,7 @@ const LinkForm = (props) => {
 
   useEffect(() => {
     if (props.Currentid === "") {
-      setValues({ ...intialStateValues });
+      setValues({ ...values });
     } else {
       getLinkById(props.Currentid);
     }
